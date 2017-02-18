@@ -1,0 +1,139 @@
+:: Start
+You woke up in a small room.
+
+You stare at the dirty ceiling for several minutes but can't remenber anything of yourself.
+
+You are wearing a T-shirt and a pair of pants. Nothing special but there seems something in the right pocket of the trousers.
+
+It is a piece of paper, a piece of paper with '[[go to the bank]]' written on it.
+
+
+:: StoryTitle
+BankAdventure
+
+
+:: StoryAuthor
+Anonymous
+
+
+:: go to the bank
+You open the door and go downstairs, and you see a man at the front desk - he may know something about you.
+​
+[[Talk to him]]
+[[Leave directly]]
+
+
+:: Talk to him
+"Are you the employee of this...eee..hotel?"
+"Yes, my name is Robert." 
+"Do you know something about me? I don't know why I lose my memory."
+"Your name is Adam, that's the only thing I know about you."
+
+When you try to ask more, he answers with almost same words everytime.
+
+[[Leave|Leave directly]]
+
+
+
+:: Leave directly
+You come to the outside.
+There is no one else on the street.
+
+How do you find the bank?
+[[Depends on intuition]]
+[[Try to find a map]]
+
+
+:: Try to find a map
+At somewhere on the street, you successfully found a map.
+It shows how to [[get to the bank]].
+
+
+:: Depends on intuition
+You are wandering through the street.
+You see an old women walking on the street. 
+
+[[Talk to her]]
+[[Ignore|get to the bank]]
+
+
+:: get to the bank
+You walked into the bank.
+There is a man who is standing at the front desk.
+
+He looks as same as the man in the hotel.
+
+"Hi Adam, I am waiting for you. Here is your memory stored." The man say after he looks me up and down,"Do you want to read your memory?"
+
+[["Yes."|End]]
+
+
+:: Talk to her
+You find she is in an even worse situation than you as she know  neither her name nor her destination.
+
+[[Bring her to the bank together]]
+[[Leave|get to the bank]]
+
+
+:: Bring her to the bank together
+You suggest she can come with you and she is also glad to have a companion. Surprisingly, the old women and you feel like old friends when you start chating. You want to spend more time with her.
+
+It seems that time passes faster when you enjoy talking with each other. Even though you spend little attention finding the bank, suddenly it turns up in front of you two.
+
+[[Enter the bank with the old women]]
+
+
+:: Enter the bank with the old women
+There is a man who is standing at the front desk.
+
+He looks as same as the man in the hotel.
+
+"Hi Adam, I am waiting for you. Here is your memory stored here." The man say after he look me up and down. Then he does the same thing to the old women and say,"Hi Eve, I am waiting for you. Here is your memory stored here." 
+Eve is happy to know her name, and she ask,"How long will it take for us to read our memory?"
+The man answer, "I'm afraid it will take the rest of the day to go through both of them."
+
+Now you decide to
+[[Read memory]]
+[[Ask Eve if she want to spend the rest of the day with you]]
+
+
+:: Read memory
+You spent the rest of the day going through your memory. 
+You know who you are and Eve is the one you have been searching for dozens of years. And you know two of you will forget everything tomorrow again.
+You turn your head to find Eve and find that she is watching you.
+
+"Happy to see you again.", You say.
+"Me too."
+"There is no more things I care on the world.", You say.
+"Me too."
+
+
+Human beings die out on this day.
+
+
+:: Ask Eve if she want to spend the rest of the day with you
+Eve agree.
+Two of you had a really nice day.
+
+"You know, I think we may be couple before." You said.
+"So do I." She said.
+
+After the day, you farewelled to Eve, returned to the hotel and plan to go to the bank tomorrow.
+
+You fell asleep with the happy memory that you created with Eve today.
+
+[[Next Day|Start]]
+
+
+
+:: End
+You spent the rest of the day going through your memory. 
+After that, you know who you are. You have a lover but you do not know where she is now. And soon, you will lose all your memory again.
+
+"I should not forget her. I must find her." You think.
+So you went back to the hotel.
+Before going to sleep, you put the note for yourself in the right pocket of your trousers.
+
+[[Next day|Start]]
+
+
