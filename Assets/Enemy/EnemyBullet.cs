@@ -49,6 +49,14 @@ public class EnemyBullet : MonoBehaviour {
 		// Texture Stuff
 		float offset = Time.time*-1f;
 		meshRenderer.material.SetTextureOffset ("_MainTex", new Vector2 (offset, offset));
+
+		// See if I've gone really far & then delete me.
+		if (transform.position.x > 500f || transform.position.x < -500f || 
+			transform.position.y > 500f || transform.position.y < -500f || 
+			transform.position.z > 500f || transform.position.z < -500f)
+		{
+			Destroy (gameObject);
+		}
 	}
 
 	void OnTriggerEnter(Collider collider) {
