@@ -37,6 +37,8 @@ namespace UnityTwine
 		Dictionary<string, int> _visitedCountPassages = new Dictionary<string,int>();
 		Dictionary<string, int> _visitedCountTags = new Dictionary<string,int>();
 
+		private Dictionary<string,Material> materialDictionary;
+
 		private class Hook
 		{
 			public MonoBehaviour target;
@@ -63,10 +65,24 @@ namespace UnityTwine
 			
 			PreviousPassageName = null;
 			CurrentPassageName = null;
+
+
 		}
 
 		void Start()
 		{
+			materialDictionary = new Dictionary<string, Material>();
+			materialDictionary.Add("Wake Up",Resources.Load<Material>("inhotelMaterial"));
+			materialDictionary.Add("go to the bank",Resources.Load<Material>("hotelMaterial"));
+			materialDictionary.Add("get to the bank",Resources.Load<Material>("bankMaterial"));
+			materialDictionary.Add("Enter the bank with the old women",Resources.Load<Material>("bankMaterial"));
+
+			if(materialDictionary.ContainsKey("Wake Up")){
+				Debug.Log("have bank");
+				Material mat;materialDictionary.TryGetValue("Wake Up",out mat);
+				RenderSettings.skybox = mat;
+			}
+
 			if (AutoPlay)
 				this.Begin();
 		}
@@ -323,6 +339,13 @@ namespace UnityTwine
 				link.Setters.Invoke();
 
 			_turns++;
+
+			Debug.Log(link.PassageName);
+			if(materialDictionary.ContainsKey(link.PassageName)){
+				//Debug.Log("have bank");
+				Material mat;materialDictionary.TryGetValue(link.PassageName,out mat);
+				RenderSettings.skybox = mat;
+			}
 
 			GoTo(link.PassageName);
 		}
