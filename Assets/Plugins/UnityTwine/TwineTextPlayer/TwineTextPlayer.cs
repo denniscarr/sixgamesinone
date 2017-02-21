@@ -14,19 +14,11 @@ public class TwineTextPlayer : MonoBehaviour {
 	public bool AutoDisplay = true;
 	public bool ShowEmptyLines = false;
 	public bool ShowNamedLinks = true;
-	//public Material nextMaterial;
-
-	//private  int indexl
-
 
 	bool _clicked = false;
 
 	// Use this for initialization
 	void Start () {
-		
-
-
-
 		LinkTemplate.gameObject.SetActive(false);
 		TextTemplate.gameObject.SetActive(false);
 		((RectTransform)LinkTemplate.transform).SetParent(null);
@@ -166,9 +158,6 @@ public class TwineTextPlayer : MonoBehaviour {
 
 			Text uiLinkText = uiLink.GetComponentInChildren<Text>();
 			uiLinkText.text = link.Text;
-
-
-			//RenderSettings.skybox = nextMaterial;
 			uiLink.onClick.AddListener(() => this.Story.Advance(link));
 			child = (RectTransform)uiLink.transform;
 		}
