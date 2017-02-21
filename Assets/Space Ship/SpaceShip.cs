@@ -1,8 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SpaceShip : MonoBehaviour {
+
+
+	public AudioMixerSnapshot shootingOn;
+	public AudioMixerSnapshot shootingOff;
+
+	bool audioOn;
 
 	DennisGameManager gm;
 
@@ -19,6 +26,7 @@ public class SpaceShip : MonoBehaviour {
 	float timeSinceLastShot;
 	public GameObject bullet;
 	Transform gunTip;
+
 
 	int health = 3;
 	public int Health {
@@ -44,6 +52,8 @@ public class SpaceShip : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		animator = GetComponent<Animator> ();
 		gunTip = GameObject.Find ("Gun Tip").transform;
+
+		audioOn = false;
 	}
 
 	void Update ()
@@ -79,6 +89,14 @@ public class SpaceShip : MonoBehaviour {
 			bulletSpread.y += Random.Range (-spread, spread);
 			Instantiate (bullet, gunTip.position , Quaternion.Euler(bulletSpread+gunTip.rotation.eulerAngles));
 			timeSinceLastShot = 0.0f;
+
+			shootingOn.TransitionTo (0.1f);
+			audioOn = true;
+		}
+		if (timeSinceLastShot > 0.3f && audioOn) {
+			audioOn = false;
+			shootingOff.TransitionTo (1.0f);
+
 		}
 	}
 }

@@ -37,7 +37,9 @@ public class CoreyGameManager : MonoBehaviour {
 
 		GameObject[] myFood = GameObject.FindGameObjectsWithTag ("CoreyFood");
 		if (myFood.Length > maxFood) {
-			Destroy (myFood [maxFood], 2.0f);
+			for (int i = 0; i < myFood.Length; i ++) {
+				Destroy (myFood [i], 1.0f);
+			}
 		}
 
 		//TESTING FUNCTION
